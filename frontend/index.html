@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ReturnGuard AI — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>ReturnGuard AI</h1>
+    <p class="subtitle">Fashion-aware RTO risk &amp; intervention agent — plug-in on top of a generic COD risk model</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="seedBtn">Seed demo orders</button>
+      <button id="refreshBtn">Refresh stats</button>
+      <span id="status"></span>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stat-card"><span class="stat-value" id="statTotal">0</span><span class="stat-label">Orders evaluated</span></div>
+      <div class="stat-card"><span class="stat-value" id="statLlmRate">0%</span><span class="stat-label">LLM invocation rate</span></div>
+      <div class="stat-card" id="actionBreakdownCard">
+        <span class="stat-label">Action breakdown</span>
+        <div id="actionBreakdown"></div>
+      </div>
+    </section>
+
+    <section class="traces">
+      <h2>Recent decision traces</h2>
+      <div id="tracesList"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
